@@ -24,7 +24,7 @@ export function LinkedInPreview({
   headline = "Head of Growth · Northwind Labs",
 }: {
   content: string;
-  imageUrl?: string;
+  imageUrl?: string | undefined;
   name?: string;
   headline?: string;
 }) {
