@@ -5,17 +5,6 @@ import { z } from "zod";
 
 import { createLovableAiGatewayRunIdFetch } from "./ai-gateway.server";
 
-const STYLES = [
-  "Personal story",
-  "Short and punchy",
-  "Educational",
-  "Contrarian",
-  "Storytelling",
-  "Case study",
-  "Lessons learned",
-  "Founder/business",
-] as const;
-
 const VOICE = `You write LinkedIn posts the way a smart, specific human writes them.
 Rules:
 - No corporate filler, no "In today's fast-paced world", no "I'm humbled to announce".
@@ -119,5 +108,3 @@ Order suggestions by impact.`,
     const output = await result.output;
     return output.suggestions.slice(0, 6);
   });
-
-export const availableStyles = STYLES;
